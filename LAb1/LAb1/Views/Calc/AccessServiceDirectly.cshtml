@@ -1,0 +1,22 @@
+﻿@inject LAb1.Services.CalcService calcService
+@{
+	ViewData["Title"] = "AccessServiceDirectly";
+	int a = calcService.GetInt();
+	int b = calcService.GetInt();
+}
+
+<div class="text-left">
+	<h1 class="display-4">AccessServiceDirectly</h1>
+	<ul>
+		<li><b>Rand Value First : @a</b></li>
+		<li><b>Rand Value Second : @b</b></li>
+		<li><b>Add : </b></li>
+		<li>@a + @b = @calcService.Add(@a, @b)</li>
+		<li><b>Sub : </b></li>
+		<li>@a - @b = @calcService.Sub(@a, @b)</li>
+		<li><b>Mult : </b></li>
+		<li>@a * @b = @calcService.Mult(@a, @b)</li>
+		<li><b>Div : </b></li>
+		<li>@a / @b = @calcService.Div(@a, @b)</li>
+	</ul>
+</div>
